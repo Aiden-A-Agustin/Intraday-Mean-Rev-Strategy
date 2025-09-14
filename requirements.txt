@@ -1,0 +1,7 @@
+pandas
+numpy
+pyyaml
+matplotlib
+tqdm
+scipy
+alpaca-trade-api

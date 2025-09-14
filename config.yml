@@ -1,0 +1,26 @@
+bar_minutes: 5
+session: {open: "09:30", close: "16:00", eod_flatten: "15:55"}
+
+universe:
+  min_price: 5.0
+  top_by_median_dollar_vol: 800
+  rebalance: monthly
+
+signal:
+  vol_lookback_min: 45 # minutes
+  entry_z: 0.75 # used if you convert to discrete entries
+  exit_z: 0.25
+  min_age_min: 5
+  max_age_min: 60
+
+portfolio:
+  gross_leverage: 0.5
+  max_weight_bps: 20
+
+costs:
+  half_spread_bps: 1.0
+  impact_bps: 1.0
+
+filters:
+  skip_first_min: 60
+  skip_last_min: 15
