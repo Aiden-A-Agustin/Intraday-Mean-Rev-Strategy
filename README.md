@@ -1,0 +1,1 @@
+# Intraday-Mean-Rev-Strategy
