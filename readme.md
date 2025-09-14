@@ -29,20 +29,28 @@ It supports both **momentum** and **mean reversion** signals, realistic **execut
 
 ## Repository structure
 
-├── README.md
-├── requirements.txt
-├── requirements-dev.txt # optional (tests + linting)
-├── config.yml # session times, costs, portfolio bounds
-├── data/ # ⚠️ ignored (minute bar parquet files)
-├── scripts/
-│ ├── run_backtest.py # single run
-│ └── walkforward.py # rolling train/test
-├── src/
-│ ├── backtest.py # vectorized backtest & execution
-│ ├── features.py # signal construction
-│ ├── metrics.py # summary metrics
-│ └── utils.py # helpers
-└── tests/ # unit tests
+- `README.md` – Project description and instructions  
+- `requirements.txt` – Core dependencies  
+- `requirements-dev.txt` – Optional (tests + linting)  
+- `config.yml` – Session times, costs, portfolio bounds  
+
+- `data/` – (ignored) raw minute bar parquet files  
+- `experiments/` – Backtest outputs (`equity_curve.csv`, `walkforward.csv`)  
+
+- `scripts/`  
+  - `run_backtest.py` – Run a single backtest  
+  - `walkforward.py` – Rolling train/test evaluation  
+
+- `src/`  
+  - `backtest.py` – Vectorized backtest & execution  
+  - `features.py` – Signal construction  
+  - `metrics.py` – Performance summary metrics  
+  - `portfolio.py` – Portfolio sizing & neutrality  
+  - `costs.py` – Transaction cost models  
+  - `utils.py` – Helper functions  
+  - `plotting.py` – Equity curve and visualization  
+
+- `tests/` – Unit tests  
 
 ---
 
